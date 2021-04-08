@@ -5,22 +5,14 @@ f_y= @(x,y,z) z
 Por=2
 a=0
 b=pi/2
-% b=1.5
 x0=a
-z0=1
-y0=0
-eps=10^(-1)
-[Err, Iter]=RungeToEps(eps,f_z,a,b,y0,z0) 
+z0=0
+y0=1
+%eps=10^(-2)
+% [Err, Iter]=RungeToEps(eps,f_z,a,b,y0,z0) 
 Y(1)=y0
 Z(1)=z0
-n=1
-% [X,Y,Z]=runge(f_z,a,b,n,y0,z0)
-% figure
-% hold on
-% grid on
-% plot(X,Y)
-% plot(X,sin(X))
-%     legend('Рунге Y','Решение')
+runge(f,a,b,n,y0,z0)
 function [Err, Iter] = RungeToEps(eps,f,a,b,y0,z0) 
     Eps=[];
     Err=[];
@@ -30,14 +22,14 @@ function [Err, Iter] = RungeToEps(eps,f,a,b,y0,z0)
     while true
         i=i+1;
         [X,Y,Z]=runge(f,a,b,n^i,y0,z0);
-        dY=abs(max(Y)-max(Y0))
+        dY=abs(max(f(X,Y,Z))-max(f(X0,Y0,Z0)))
         Err=[dY,Err]
-        if(dY<eps)
-            break
-        end
-%         if i>1
+%         if(dY<eps)
 %             break
 %         end
+        if i>1
+            break
+        end
         Y0=Y;
         Z0=Z;
         X0=X;
@@ -58,8 +50,8 @@ function [X,Y,Z]= runge(f,a,b,n,y0,z0)
     Z(1)=z0
     X=GridRavn(a,b,n);
     for i= 1:length(X)-1
-        h=abs((a-b)/n);
-       % h=0.1;
+        h=(a-b)/n;
+        h=0.1;
         k1=Z(i);
         g1=f(X(i),Y(i),Z(i))
         
