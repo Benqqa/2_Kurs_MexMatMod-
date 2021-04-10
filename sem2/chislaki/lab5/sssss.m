@@ -7,7 +7,7 @@ y0=0
 
 Iter=[];
 Eps=[];
-for i = 1:14;
+for i = 1:13;
     Error=[];
     eps=10^(-i);
     Eps=[Eps,eps];
@@ -39,8 +39,16 @@ for i = 1:14;
     hold on
     grid on
     plot(X,Y,'Linewidth',3)
-    plot(X,sin(X),'Linewidth',1.5)
-        end
+    plot([a:0.1:b],sin([a:0.1:b]),'Linewidth',1.5)
+    legend('Рунге','эталонное решение')
+    
+end
+        figure
+    semilogx(Eps,Iter)
+    title('зависимость числа итераций от заданной точности')
+    figure
+    semilogy([1:11],Error)
+    title('зависимость ошибки от номера итерации')
 function [Grid]= GridRavn(a,b,n);
     Grid=[];
     h1=(b-a)/(n);
