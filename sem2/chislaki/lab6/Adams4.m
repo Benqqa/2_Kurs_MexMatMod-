@@ -7,7 +7,7 @@ y0=0
 
 Iter=[];
 Eps=[];
-toch=17
+toch=13
 for i = 1:toch
     Error=[];
     eps=10^(-i);
@@ -60,7 +60,7 @@ end
 function [Y]=runge_Adams4(f,a,b,n,X,y0,z0)
     if(n>4)
         %разгон
-        [Y,Z]= runge(f,a,b,n,X,y0,z0,4);
+        [Y,Z]= runge(f,a,b,n,X,y0,z0,3);
         %метод Адомсона4
         for i=4:length(X)-1
             
