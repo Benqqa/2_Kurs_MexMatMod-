@@ -1,5 +1,5 @@
-f= @(x,y,z)2*x.*z+2*y-4*x;
-f_ist = @(x) x+exp(x.^2);
+f= @(x,y,z)tan(x).*z-3*y+sin(x)
+f_ist = @(x)sin(x)
 p=@(x) -2*x;
 q=@(x) -2;
 f_i=@(x) -4*x;
@@ -25,7 +25,7 @@ for i = 1:toch
         i=2^k;
         if(k==1)
             [X0,h0] = GridRavn(a,b,i);
-            [Y0] = Kon_Raz(f,p,q,f_i,a,b,i,X0,h,ya,yb);
+            [Y0] = Kon_Raz(f,p,q,f_i,a,b,i,X0,h0,ya,yb);
         end
         [X,h] = GridRavn(a,b,2*i);
         [Y] = Kon_Raz(f,p,q,f_i,a,b,2*i,X,h,ya,yb);

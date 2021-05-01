@@ -1,5 +1,5 @@
-f= @(x,y,z)-1*z-x^2
-f_ist = @(x) -x.^3/3+x.^2-2*x
+f= @(x,y,z) tan(x).*z-3*y+sin(x)
+f_ist = @(x) sin(x)
 %откуда
 
 a=0;
@@ -10,8 +10,8 @@ yb=f_ist(b)
 Iter=[];
 Eps=[];
 
-O1=-pi/3;
-O2=pi/3;
+O1=-pi/4;
+O2=pi/4;
 % toch=5
 % for i = 1:toch
 %     
@@ -55,18 +55,18 @@ O2=pi/3;
 % semilogy(Error)
 % title('зависимость ошибки от номера итерации')
 
-n=2
+n=12
 X= GridRavn(a,b,n);
 O1=-pi/3;
 O2=pi/3;
-[Y,O1,O2]=m_shoot(f,a,b,n,X,ya,yb,10^(-10),O1,O2)
+[Y,O1,O2]=m_shoot(f,a,b,n,X,ya,yb,10^(-5),O1,O2)
 % [Y,O1,O2]=m_shoot(f,a,b,n,X,ya,yb,0.00000000001,O1,O2)
 figure
 hold on
 grid on
 
 plot(X,Y,'Linewidth',3)
-% plot([a:0.1:b],sin([a:0.1:b]),'Linewidth',1.5)
+plot([a:0.1:b],sin([a:0.1:b]),'Linewidth',1.5)
 legend('эталонное решение','Пристрелка','Пристрелка n=4')
 
 ErrAbs=[]
@@ -92,7 +92,7 @@ function [Y,O1,O2] =m_shoot(f,a,b,n,X,ya,yb,eps,O1,O2)
         disp(Y_n_2(length(Y_n_2)))
         d1=abs(Y_n_1(length(Y_n_1))-yb)
         d2=abs(Y_n_2(length(Y_n_2))-yb)
-        if abs(O1-O2)<eps
+        if abs(d1)<eps
             break
         end
         if d1<d2
