@@ -4,9 +4,14 @@ f_ist = @(x) sin(x)
 
 a=0;
 b=1;
-ya=f_ist(a)
-yb=f_ist(b)
-
+ya1=f_ist(a)
+yb1=f_ist(b)
+Otkl=[]
+SSSS=[]
+for m=0:11
+   yb=yb1*(0.95+0.01*m)
+   SSSS=[SSSS,0.95+0.01*m]
+   ya=ya1
 Iter=[];
 Eps=[];
 
@@ -60,6 +65,9 @@ X= GridRavn(a,b,n);
 O1=-pi/3;
 O2=pi/3;
 [Y,O1,O2]=m_shoot(f,a,b,n,X,ya,yb,10^(-5),O1,O2)
+max(Y)
+f_ist(b)
+Otkl=[Otkl,max(Y)-f_ist(b)]
 % [Y,O1,O2]=m_shoot(f,a,b,n,X,ya,yb,0.00000000001,O1,O2)
 figure
 hold on
@@ -67,21 +75,28 @@ grid on
 
 plot(X,Y,'Linewidth',3)
 plot([a:0.1:b],sin([a:0.1:b]),'Linewidth',1.5)
-legend('эталонное решение','Пристрелка','Пристрелка n=4')
-
-ErrAbs=[]
-ErrRun=[]
-for i=1:length(X)
-   ErrAbs=[ErrAbs, abs(Y(i)-f_ist(X(i)))]
-   ErrRun=[ErrRun, abs(Y(i)-f_ist(X(i)))/(2^2-1)]
+% legend('эталонное решение','Пристрелка','Пристрелка n=4')
+% 
+% ErrAbs=[]
+% ErrRun=[]
+% for i=1:length(X)
+%    ErrAbs=[ErrAbs, abs(Y(i)-f_ist(X(i)))]
+%    ErrRun=[ErrRun, abs(Y(i)-f_ist(X(i)))/(2^2-1)]
+% end
+% figure
+% hold on
+% grid on
+% 
+% plot(ErrAbs,'Linewidth',3)
+% plot(ErrRun,'Linewidth',1.5)
+% legend('Abs','Runge')
 end
+
 figure
 hold on
 grid on
 
-plot(ErrAbs,'Linewidth',3)
-plot(ErrRun,'Linewidth',1.5)
-legend('Abs','Runge')
+plot(SSSS,Otkl,'Linewidth',3)
 function [Y,O1,O2] =m_shoot(f,a,b,n,X,ya,yb,eps,O1,O2)
     Y_n_1=runge(f,a,b,n,X,ya,tan(O1))
     Y_n_2=runge(f,a,b,n,X,ya,tan(O2))
@@ -92,7 +107,7 @@ function [Y,O1,O2] =m_shoot(f,a,b,n,X,ya,yb,eps,O1,O2)
         disp(Y_n_2(length(Y_n_2)))
         d1=abs(Y_n_1(length(Y_n_1))-yb)
         d2=abs(Y_n_2(length(Y_n_2))-yb)
-        if abs(d1)<eps
+        if abs(d1)  <eps || k>10000
             break
         end
         if d1<d2
