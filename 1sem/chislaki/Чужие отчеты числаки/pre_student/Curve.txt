@@ -1,0 +1,171 @@
+#pragma warning (disable:4996)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <crtdbg.h>
+
+#include "labengine.h"
+typedef struct point_t point_t;
+typedef struct {
+  double r;
+  double g;
+  double b;
+} color_t;
+const color_t BEGIN_COLOR = {0, 0, 255};
+const color_t END_COLOR = {255, 0, 0};
+struct point_t {
+  double x;
+  double y;
+  color_t color;
+  point_t* nextPoint;
+};
+typedef struct {
+  point_t* firstPoint;
+} curve_t;
+curve_t* CurveCreate(double ax, double ay, double bx, double by) {//—оздать кривую
+  int size = 2;
+  curve_t* curve = (curve_t*)malloc(sizeof(curve_t));
+  point_t* firstPoint = (point_t*)malloc(sizeof(point_t)), *secondPoint = (point_t*)malloc(sizeof(point_t));
+  if (curve && firstPoint && secondPoint) {
+    firstPoint->x = ax;
+    firstPoint->y = ay;
+    firstPoint->color = BEGIN_COLOR;
+
+    secondPoint->x = bx;
+    secondPoint->y = by;
+    secondPoint->color = END_COLOR;
+
+    secondPoint->nextPoint = NULL;
+    firstPoint->nextPoint = secondPoint;
+    curve->firstPoint = firstPoint;
+
+    return curve;
+  }
+
+  free(curve);
+  free(firstPoint);
+  free(secondPoint);
+  return NULL;
+}
+
+void CurveDestroy(curve_t* curve) {//уничтожить кривую
+  point_t* tmpPoint = curve->firstPoint, *nextPoint;
+  do {
+    nextPoint = tmpPoint->nextPoint;
+    free(tmpPoint);
+    tmpPoint = nextPoint;
+  } while (nextPoint != NULL);
+  free(curve);
+}
+
+void CurveDraw(curve_t* curve) {//нарисовать кривую
+  point_t* tmpPoint, *nextPoint;
+  color_t lineColor;
+
+  assert(curve);
+  assert(curve->firstPoint);
+  tmpPoint = curve->firstPoint;
+  while ((nextPoint = tmpPoint->nextPoint) != NULL) {
+
+    //установить цвет
+    lineColor.r = (tmpPoint->color.r + nextPoint->color.r) / 2;
+    lineColor.g = (tmpPoint->color.g + nextPoint->color.g) / 2;
+    lineColor.b = (tmpPoint->color.b + nextPoint->color.b) / 2;
+    LabSetColorRGB((int)lineColor.r, (int)lineColor.g, (int)lineColor.b);
+
+    //нарисовать линию
+    LabDrawLine((int)tmpPoint->x, (int)tmpPoint->y, (int)nextPoint->x, (int)nextPoint->y);
+    tmpPoint = nextPoint;
+  };
+}
+
+//ј как € в армию пошел, да из родного дома,
+//» был у мен€ талант, наебать любого, 
+//Ќо наебали там мен€, мен€ побрили, 
+//ƒали в руки ’/Ѕ, парашют вручили.  
+
+void CurveNext(curve_t* curve) {//перейти к следующей кривой
+  int direction = 1;
+  point_t* tmpPoint, *nextPoint, *emptyPoint;
+  double dx, dy;
+  
+  assert(curve);
+  assert(curve->firstPoint);
+
+  tmpPoint = curve->firstPoint;
+  while ((nextPoint = tmpPoint->nextPoint) != NULL) {
+    emptyPoint = (point_t*)malloc(sizeof(point_t));
+    assert(emptyPoint);
+    emptyPoint->nextPoint = nextPoint;
+    dx = nextPoint->x - tmpPoint->x;
+    dy = nextPoint->y - tmpPoint->y;
+    emptyPoint->x = 0.5 * (tmpPoint->x + nextPoint->x + dy * direction);
+    emptyPoint->y = 0.5 * (tmpPoint->y + nextPoint->y - dx * direction);
+
+    emptyPoint->color.r = (tmpPoint->color.r + nextPoint->color.r) / 2;
+    emptyPoint->color.g = (tmpPoint->color.g + nextPoint->color.g) / 2;
+    emptyPoint->color.b = (tmpPoint->color.b + nextPoint->color.b) / 2;
+
+    direction *= -1;
+    tmpPoint->nextPoint = emptyPoint;
+    tmpPoint = nextPoint;
+  }
+}
+
+void CurvePrev(curve_t* curve) {//перейти к прерырущей кривой
+  point_t* tmpPoint, *nextPoint;
+
+  assert(curve);
+  assert(curve->firstPoint);
+
+  tmpPoint = curve->firstPoint;
+  while (tmpPoint->nextPoint != NULL) {
+    nextPoint = tmpPoint->nextPoint->nextPoint;
+    free(tmpPoint->nextPoint);
+    tmpPoint->nextPoint = nextPoint;
+    tmpPoint = nextPoint;
+  }
+
+}
+
+int main(void) {
+
+  if (LabInit()) {
+    curve_t* curve;
+    labkey_t key;
+    int width = LabGetWidth(); //узнать ширину консоли
+    int height = LabGetHeight();//узнать высоту консоли
+
+    curve = CurveCreate(width / 4, height / 2, 3 * width / 4, 3 * height / 4);
+
+    // нарисовать первую пр€мую
+    LabClear();
+    CurveDraw(curve);
+    LabDrawFlush();
+    // реализаци€ смены направлений
+    while ((key = LabInputKey()) != LABKEY_ESC) {
+      switch (key) {
+        case '+':
+          CurveNext(curve);
+          break;
+
+        case '-':
+          if (curve->firstPoint->nextPoint->nextPoint)
+            CurvePrev(curve);
+          break;
+
+        default:
+          continue;
+      }
+
+      LabClear();
+      CurveDraw(curve);
+      LabDrawFlush();
+    }
+    CurveDestroy(curve);
+  }
+
+  LabTerm();
+  return 0;
+}

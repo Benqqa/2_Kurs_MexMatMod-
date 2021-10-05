@@ -1,0 +1,226 @@
+C = logspace(1,10,10);
+for i = 1:1:10
+    vec(i) = sin(i);
+end
+X = [0,1,2,3,4,5,6,7,8,9];
+X=X';
+%disp(X);
+otrazhenia = eye(10);
+for j = 1:1:10
+    for k = 1:1:10
+        otrazhenia(j,k) = otrazhenia(j,k) - 2 * vec(j) * vec(k)/ norm(vec,2).^2;
+    end
+end
+
+hold all
+grid on
+
+for i = 1:1:10
+    MAT = eye(10);
+    for k = 1:1:10
+        MAT(k,k) = (k - 1) / (10 - 1) * (C(i) - 1) + 1;
+    end
+    MAT = otrazhenia * MAT * otrazhenia;
+    
+    matrix = fopen('input_matlab.txt', 'w');
+    t=10;
+    fprintf(matrix,'%d\r\n',t);
+    for j=1:1:10
+        for k=1:1:10
+            fprintf(matrix,'%.14f ',MAT(j,k));
+        end
+        fprintf(matrix,'\r\n');
+    end
+    fclose(matrix);
+    
+    right_part = fopen('right_part.txt', 'w');
+    b = MAT*(X);
+    for k=1:1:10
+        fprintf(right_part,'%.14f ',b(k));
+    end
+    fclose(right_part);
+    
+    system('C:\Users\danii\Desktop\ignatiev\C\numerical methods\Lab2_LU\Debug\Lab2_LU.exe');
+    input_C = fopen('output_C.txt', 'r');
+    
+    X_new = fscanf(input_C, '%f %f %f %f %f %f %f %f %f %f');
+    fclose(input_C);
+    % disp(X_new)
+    % disp('\t\n')
+    
+    NNOORRMM1(i) = norm(X_new - X, inf);
+    NNOORRMM2(i) = norm(MAT*X_new - b, inf);
+    plot(i,log(NNOORRMM1(i)),'ro')
+    plot(i,log(NNOORRMM2(i)),'b*')
+    
+end
+set(gca,'FontSize',10)
+title('График зависимости погрешности от cond.');
+xlabel('cond == 10^x');
+ylabel('погрешность == 10^y');
+legend('погрешность||x-x*||','погрешность||Ax-b||','location','northwest');
+
+
+C = logspace(1,10,10);
+for i = 1:1:10
+    vec(i) = sin(i);
+end
+
+otrazhenia = eye(10);
+for j = 1:1:10
+    for k = 1:1:10
+        otrazhenia(j,k) = otrazhenia(j,k) - 2 * vec(j) * vec(k)/ norm(vec,2).^2;
+    end
+end
+
+
+for i = 4:3:10
+    
+    figure();
+    hold all
+    grid on
+    
+    title(['График зависимости погрешности от db при cond = 1e + ',num2str(i)]);
+    if i == 4
+        clr = 'm*';
+    end
+    if i == 7
+        clr = 'b*';
+    end
+    if i == 10
+        clr = 'r*';
+    end
+    
+    
+    for h=1:1:50
+        MAT = eye(10);
+        for k = 1:1:10
+            MAT(k,k) = (k - 1) / (10 - 1) * (C(i) - 1) + 1;
+        end
+        MAT = otrazhenia * MAT * otrazhenia;
+        
+        matrix = fopen('input_matlab.txt', 'w');
+        t=10;
+        fprintf(matrix,'%d\r\n',t);
+        
+        for j=1:1:10
+            for k=1:1:10
+                fprintf(matrix,'%.15f ',MAT(j,k));
+            end
+            fprintf(matrix,'\r\n');
+        end
+        fclose(matrix);
+        
+        right_part = fopen('right_part.txt', 'w');
+        b = MAT*(X);
+        for k=1:1:10
+            b1(k) = b(k)*randi([1020000 1050000])/1000000;
+            fprintf(right_part,'%.15f ',b1(k));
+        end
+        fclose(right_part);
+        
+        b1=b1';
+        db = b1-b;
+        
+        system('C:\Users\danii\Desktop\ignatiev\C\numerical methods\Lab2_LU\Debug\Lab2_LU.exe');
+        input_C = fopen('output_C.txt', 'r');
+        
+        X_new = fscanf(input_C, '%f %f %f %f %f %f %f %f %f %f');
+        
+        fclose(input_C);
+        %disp(X_new-X)
+        NNOORRMM1(h) = norm(db,inf)/norm(b,inf);
+        NNOORRMM2(h) = norm(X_new - X, inf)/norm(X,inf);
+        plot((NNOORRMM1(h)),(NNOORRMM2(h)),clr)
+        clear b1;
+        clear db;
+    end
+    
+    set(gca,'FontSize',10)
+    ylabel('||x-y||/||x|| = y');
+    xlabel('||db||/||b||');
+    legend('погрешность||x-x*|| от ||db||/||b||','location','northwest');
+    
+end
+
+
+
+for i = 4:3:10
+    
+    figure();
+    hold all
+    grid on
+    
+    title(['График зависимости погрешности от db в матрице Гильберта размера ',num2str(i)]);
+    if i == 4
+        clr = 'g*';
+    end
+    if i == 7
+        clr = 'c*';
+    end
+    if i == 10
+        clr = 'r*';
+    end
+    
+    
+    MAT = hilb(i);
+    matrix = fopen('input_matlab.txt', 'w');
+    t=i;
+    fprintf(matrix,'%d\r\n',t);
+    
+    for j=1:1:i
+        for k=1:1:i
+            fprintf(matrix,'%.15f ',MAT(j,k));
+        end
+        fprintf(matrix,'\r\n');
+    end
+    fclose(matrix);
+    X = linspace(1,i,i);
+    X=X';
+    b = MAT*(X);
+    
+    for h=1:1:30
+        right_part = fopen('right_part.txt', 'w');
+        for k=1:1:i
+            b1(k) = b(k)*randi([1020000 1050000])/1000000;
+            fprintf(right_part,'%.15f ',b1(k));
+        end
+        fclose(right_part);
+        
+        b1=b1';
+        db = b1-b;
+        
+        system('C:\Users\danii\Desktop\ignatiev\C\numerical methods\Lab2_LU\Debug\Lab2_LU.exe');
+        input_C = fopen('output_C.txt', 'r');
+        
+        if(i==4)
+        X_new = fscanf(input_C, '%f %f %f %f');
+        end
+        
+        if(i==7)
+            X_new = fscanf(input_C, '%f %f %f %f %f %f %f');
+        end
+        
+        if(i==10)
+            X_new = fscanf(input_C, '%f %f %f %f %f %f %f %f %f %f');
+        end
+        
+        
+        fclose(input_C);
+        %disp(X_new-X)
+        NNOORRMM1(h) = norm(db,inf)/norm(b,inf);
+        NNOORRMM2(h) = norm(X_new - X, inf)/norm(X,inf);
+        plot((NNOORRMM1(h)),(NNOORRMM2(h)),clr)
+        clear b1;
+        clear db;
+    end
+    
+    set(gca,'FontSize',10)
+    ylabel('||x-y||/||x|| = y');
+    xlabel('||db||/||b||');
+    legend('погрешность||x-x*|| от ||db||/||b||','location','northwest');
+    
+end
+
+
+disp('end.')

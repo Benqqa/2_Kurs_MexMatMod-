@@ -1,0 +1,218 @@
+#include "labengine.h"
+#include <malloc.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#define SIDE 20
+#define CRASH 13
+#define START_SIZE 4
+#define CHANCE_RATIO 1
+typedef enum {
+  DOWN,
+  RIGHT,
+  UP,
+  LEFT,
+} ways_t;
+typedef enum {
+  SPEED_UP,
+  DEFAULT,
+} bonusnames_t;
+typedef enum {
+  SPEED_UP_DURATION = 30,
+} duration_list_t;
+typedef struct {
+  int x;
+  int y;
+} coord_t;
+typedef struct {
+  int size;
+  coord_t* cell;
+} point_t;
+typedef struct {
+  int exist;
+  bonusnames_t createdBonus;
+  bonusnames_t activeBonus;
+  int timeDur;
+  coord_t cell;
+} bonus_t;
+void DrawSnake(point_t* snake, labcolor_t color) {
+  int length = SIDE / 2, i;
+  LabSetColor(color);
+  for(i = 0; i < snake->size; i++)
+    LabDrawRectangle(snake->cell[i].x - length, snake->cell[i].y - length, snake->cell[i].x + length, snake->cell[i].y + length);
+}
+ways_t WichWay(int c, ways_t way) {
+  labkey_t arrows[] = {LABKEY_DOWN, LABKEY_RIGHT, LABKEY_UP, LABKEY_LEFT};
+  ways_t waysList[] = {DOWN, RIGHT, UP, LEFT};
+  int i;
+  for (i = 0; i < sizeof(arrows) / sizeof(arrows[0]); i++)
+    if (c == arrows[i] && way != waysList[(i + 2) % (sizeof(waysList) / sizeof(waysList[0]))])
+      return waysList[i];
+  return way;
+}
+int Move(point_t* snake, ways_t way,int width, int height) {
+  int i, interimX = snake->cell[0].x, interimY = snake->cell[0].y;
+  switch(way) {
+  case DOWN:
+    interimY += SIDE;
+    if(interimY > height)
+      interimY -= height;
+    break;
+  case UP:
+    interimY -= SIDE;
+    if(interimY < 0)
+      interimY += height;
+    break;
+  case RIGHT:
+    interimX += SIDE;
+    if(interimX > width)
+      interimX -= width;
+    break;
+  case LEFT:
+    interimX -= SIDE;
+    if(interimX < 0)
+      interimX += width;
+    break;
+  }
+  for (i = snake->size - 1; i > 0; i--) {
+    if (snake->cell[i - 1].x == interimX && snake->cell[i - 1].y == interimY)
+      return CRASH;
+    snake->cell[i].x = snake->cell[i - 1].x;
+    snake->cell[i].y = snake->cell[i - 1].y;
+  }
+  snake->cell[0].x = interimX;
+  snake->cell[i].y = interimY;
+  return 0;
+}
+void SpawnBonus(bonus_t* powerUp, int width, int height) {
+  int nameGen, i = 0, maxChance = (int)pow((double)CHANCE_RATIO, DEFAULT + 1), bonusChance;
+
+  powerUp->cell.x = rand() % width;
+  if (powerUp->cell.x > SIDE)
+    powerUp->cell.x -= powerUp->cell.x % SIDE;
+  else
+    powerUp->cell.x = SIDE;
+  powerUp->cell.y = rand() % height;
+  if (powerUp->cell.y > SIDE)
+    powerUp->cell.y -= powerUp->cell.y % SIDE;
+  else
+    powerUp->cell.y = SIDE;
+  nameGen = rand() % maxChance + 1;
+  bonusChance = maxChance;
+  for (i = 0, bonusChance = maxChance / CHANCE_RATIO; nameGen % bonusChance != 0; i++, bonusChance /= CHANCE_RATIO);
+    powerUp->createdBonus = (bonusnames_t)i;
+}
+
+void ActivateBonus(bonus_t* powerUp, int* delay){
+ /* switch(powerUp->createdBonus) {
+  case SPEED_UP:
+    *delay /= 2;
+    powerUp->timeDur = (int)SPEED_UP_DURATION;
+    break;
+  }
+  powerUp->activeBonus = powerUp->createdBonus;*/
+}
+int IsCatched(coord_t cellSnake, coord_t cellPowerUp) {
+  if (cellSnake.x == cellPowerUp.x && cellPowerUp.y == cellSnake.y) {
+    return 1;
+  }
+  return 0;
+}
+int ReadLastScore(FILE* scoreList) {
+  int score;
+  while(fscanf_s(scoreList, "%d", &score) != EOF);
+  fprintf(scoreList,"\n");
+  return score;
+}
+void WriteLastScore(FILE* scoreList,int score) {
+  fprintf(scoreList,"%d", score);
+  fclose(scoreList);
+}
+void DrawBonus(bonus_t* powerUp, int delay) {
+  int length = SIDE / 2;
+  labcolor_t colorsList[] = {LABCOLOR_RED, LABCOLOR_GREEN};
+  LabSetColor(colorsList[powerUp->createdBonus]);
+  LabDrawRectangle(powerUp->cell.x - length, powerUp->cell.y - length, powerUp->cell.x + length, powerUp->cell.y + length);
+}
+void StopBonus(bonusnames_t activeBonus, int* delay) {
+  switch(activeBonus) {
+  case SPEED_UP:
+    *delay *= 2;
+  }
+}
+
+//Десант вперёд, 501 502 503!
+//Десант вперёд, словно птицы парят над землёй пацаны! 
+//Десант вперёд, врагу облава! 
+//Десант вперёд, десанту слава! 
+//Десант вперёд, отчизны верные сыны! 
+//Десант вперёд, врагу облава! 
+//Десант вперёд, десанту слава! 
+//Десант вперёд, отчизны верные сыны!
+
+int main(void)
+{
+  if (LabInit())
+  {
+    int width = LabGetWidth();
+    int height = LabGetHeight();
+    int c = 0, score ,delay = 100;
+    FILE* scoreList;
+    bonus_t* powerUp = (bonus_t*)malloc(sizeof(bonus_t));
+    ways_t way = DOWN;
+    point_t* snake = (point_t*)malloc(sizeof(point_t));
+    //fopen_s(&scoreList, "scorelist.txt", "r+");
+    //score = ReadLastScore(scoreList);
+    //srand(score);
+    srand((unsigned int)time(NULL));
+    powerUp->activeBonus = (bonusnames_t)(DEFAULT + 1);
+    powerUp->exist = 0;
+    snake->size = START_SIZE;
+    snake->cell = (coord_t*)malloc(snake->size*sizeof(coord_t));
+    snake->cell[0].x = width / 2;
+    snake->cell[0].y = height / 2;
+    do {
+      if (!powerUp->exist) {
+        SpawnBonus(powerUp,width, height);
+        powerUp->exist = 1;
+      }
+      else {
+        powerUp->timeDur--;
+        if (powerUp->timeDur == 0)
+          StopBonus(powerUp->activeBonus, &delay);
+      }
+      DrawBonus(powerUp,delay);
+      DrawSnake(snake, LABCOLOR_WHITE);
+      LabDrawFlush();
+      if (LabInputKeyReady()) {
+        c = LabInputKey();
+        way = WichWay(c, way);
+      }
+      LabDelay(delay);
+      LabClear();
+      if(IsCatched(snake->cell[0], powerUp->cell)) {
+        if(powerUp->createdBonus != DEFAULT)
+          ActivateBonus(powerUp,&delay);
+        snake->size++; 
+        snake->cell = (coord_t*)realloc(snake->cell, snake->size*sizeof(coord_t));
+        powerUp->exist = 0;
+      }
+      if (Move(snake, way, width, height) == CRASH) {
+        DrawSnake(snake, LABCOLOR_RED);
+        LabDrawFlush();
+        LabDelay(40);
+        DrawSnake(snake, LABCOLOR_WHITE);
+        LabDrawFlush();
+        while(LabInputKey() != LABKEY_ESC);
+        break;
+      }
+    } while (c != LABKEY_ESC);
+    //WriteLastScore(scoreList, snake->size - START_SIZE);
+    free(snake->cell);
+    free(powerUp);
+    free(snake);
+    LabTerm();
+  }
+  return 0;
+}

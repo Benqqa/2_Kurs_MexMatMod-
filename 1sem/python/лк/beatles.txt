@@ -1,0 +1,428 @@
+id	Song	Album	Year	File
+1	I Saw Her Standing There	Please Please Me	1963	isawherstandingthere.txt
+2	Misery	Please Please Me	1963	misery.txt
+3	Anna (Go To Him)	Please Please Me	1963	annagotohim.txt
+4	Chains	Please Please Me	1963	chains.txt
+5	Boys	Please Please Me	1963	boys.txt
+6	Ask Me Why	Please Please Me	1963	askmewhy.txt
+7	Please Please Me	Please Please Me	1963	pleasepleaseme.txt
+8	Love Me Do	Please Please Me	1963	lovemedo.txt
+9	P.S. I Love You	Please Please Me	1963	psiloveyou.txt
+10	Baby It's You	Please Please Me	1963	babyitsyou.txt
+11	Do You Want To Know A Secret	Please Please Me	1963	doyouwanttoknowasecret.txt
+12	A Taste Of Honey	Please Please Me	1963	atasteofhoney.txt
+13	There's A Place	Please Please Me	1963	theresaplace.txt
+14	Twist And Shout	Please Please Me	1963	twistandshout.txt
+15	It Won't Be Long	With The Beatles	1963	itwontbelong.txt
+16	All I've Got To Do	With The Beatles	1963	allivegottodo.txt
+17	All My Loving	With The Beatles	1963	allmyloving.txt
+18	Don't Bother Me	With The Beatles	1963	dontbotherme.txt
+19	Little Child	With The Beatles	1963	littlechild.txt
+20	Till There Was You	With The Beatles	1963	tilltherewasyou.txt
+21	Please Mister Postman	With The Beatles	1963	pleasemisterpostman.txt
+22	Roll Over Beethoven	With The Beatles	1963	rolloverbeethoven.txt
+23	Hold Me Tight	With The Beatles	1963	holdmetight.txt
+24	You Really Got A Hold On Me	With The Beatles	1963	youreallygotaholdonme.txt
+25	I Wanna Be Your Man	With The Beatles	1963	iwannabeyourman.txt
+26	Devil In Her Heart	With The Beatles	1963	devilinherheart.txt
+27	Not A Second Time	With The Beatles	1963	notasecondtime.txt
+28	Money (That's What I Want)	With The Beatles	1963	moneythatswhatiwant.txt
+29	A Hard Day's Night	A Hard Day's Night	1964	aharddaysnight.txt
+30	I Should Have Known Better	A Hard Day's Night	1964	ishouldhaveknownbetter.txt
+31	If I Fell	A Hard Day's Night	1964	ififell.txt
+32	I'm Happy Just To Dance With You	A Hard Day's Night	1964	imhappyjusttodancewithyou.txt
+33	And I Love Her	A Hard Day's Night	1964	andiloveher.txt
+34	Tell Me Why	A Hard Day's Night	1964	tellmewhy.txt
+35	Can't Buy Me Love	A Hard Day's Night	1964	cantbuymelove.txt
+36	Any Time At All	A Hard Day's Night	1964	anytimeatall.txt
+37	I'll Cry Instead	A Hard Day's Night	1964	illcryinstead.txt
+38	Things We Said Today	A Hard Day's Night	1964	thingswesaidtoday.txt
+39	When I Get Home	A Hard Day's Night	1964	whenigethome.txt
+40	You Can't Do That	A Hard Day's Night	1964	youcantdothat.txt
+41	I'll Be Back	A Hard Day's Night	1964	illbeback.txt
+42	No Reply	Beatles For Sale	1964	noreply.txt
+43	I'm A Loser	Beatles For Sale	1964	imaloser.txt
+44	Baby's In Black	Beatles For Sale	1964	babysinblack.txt
+45	Rock And Roll Music	Beatles For Sale	1964	rockandrollmusic.txt
+46	I'll Follow The Sun	Beatles For Sale	1964	illfollowthesun.txt
+47	Mr. Moonlight	Beatles For Sale	1964	mrmoonlight.txt
+48	Medley: Kansas City / Hey, Hey, Hey, Hey	Beatles For Sale	1964	medleykansascityheyheyheyhey.txt
+49	Eight Days A Week	Beatles For Sale	1964	eightdaysaweek.txt
+50	Words Of Love	Beatles For Sale	1964	wordsoflove.txt
+51	Honey Don't	Beatles For Sale	1964	honeydont.txt
+52	Every Little Thing	Beatles For Sale	1964	everylittlething.txt
+53	I Don't Want To Spoil The Party	Beatles For Sale	1964	idontwanttospoiltheparty.txt
+54	What You're Doing	Beatles For Sale	1964	whatyouredoing.txt
+55	Everybody's Trying To Be My Baby	Beatles For Sale	1964	everybodystryingtobemybaby.txt
+56	Help!	Help!	1965	help.txt
+57	The Night Before	Help!	1965	thenightbefore.txt
+58	You've Got To Hide Your Love Away	Help!	1965	youvegottohideyourloveaway.txt
+59	I Need You	Help!	1965	ineedyou.txt
+60	Another Girl	Help!	1965	anothergirl.txt
+61	You're Going To Lose That Girl	Help!	1965	youregoingtolosethatgirl.txt
+62	Ticket To Ride	Help!	1965	tickettoride.txt
+63	Act Naturally	Help!	1965	actnaturally.txt
+64	It's Only Love	Help!	1965	itsonlylove.txt
+65	You Like Me Too Much	Help!	1965	youlikemetoomuch.txt
+66	Tell Me What You See	Help!	1965	tellmewhatyousee.txt
+67	I've Just Seen A Face	Help!	1965	ivejustseenaface.txt
+68	Yesterday	Help!	1965	yesterday.txt
+69	Dizzy Miss Lizzy	Help!	1965	dizzymisslizzy.txt
+70	Drive My Car	Rubber Soul	1965	drivemycar.txt
+71	Norwegian Wood (This Bird Has Flown)	Rubber Soul	1965	norwegianwoodthisbirdhasflown.txt
+72	You Won't See Me	Rubber Soul	1965	youwontseeme.txt
+73	Nowhere Man	Rubber Soul	1965	nowhereman.txt
+74	Think For Yourself	Rubber Soul	1965	thinkforyourself.txt
+75	The Word	Rubber Soul	1965	theword.txt
+76	Michelle	Rubber Soul	1965	michelle.txt
+77	What Goes On	Rubber Soul	1965	whatgoeson.txt
+78	Girl	Rubber Soul	1965	girl.txt
+79	I'm Looking Through You	Rubber Soul	1965	imlookingthroughyou.txt
+80	In My Life	Rubber Soul	1965	inmylife.txt
+81	Wait	Rubber Soul	1965	wait.txt
+82	If I Needed Someone	Rubber Soul	1965	ifineededsomeone.txt
+83	Run For Your Life	Rubber Soul	1965	runforyourlife.txt
+84	Taxman	Revolver	1966	taxman.txt
+85	Eleanor Rigby	Revolver	1966	eleanorrigby.txt
+86	I'm Only Sleeping	Revolver	1966	imonlysleeping.txt
+87	Love You To	Revolver	1966	loveyouto.txt
+88	Here, There And Everywhere	Revolver	1966	herethereandeverywhere.txt
+89	Yellow Submarine	Revolver	1966	yellowsubmarine.txt
+90	She Said, She Said	Revolver	1966	shesaidshesaid.txt
+91	Good Day Sunshine	Revolver	1966	gooddaysunshine.txt
+92	And Your Bird Can Sing	Revolver	1966	andyourbirdcansing.txt
+93	For No One	Revolver	1966	fornoone.txt
+94	Doctor Robert	Revolver	1966	doctorrobert.txt
+95	I Want To Tell You	Revolver	1966	iwanttotellyou.txt
+96	Got To Get You Into My Life	Revolver	1966	gottogetyouintomylife.txt
+97	Tomorrow Never Knows	Revolver	1966	tomorrowneverknows.txt
+98	Sgt. Pepper's Lonely Hearts Club Band	Sgt. Pepper's Lonely Hearts Club Band	1967	sgtpepperslonelyheartsclubband.txt
+99	With A Little Help From My Friends	Sgt. Pepper's Lonely Hearts Club Band	1967	withalittlehelpfrommyfriends.txt
+100	Lucy In The Sky With Diamonds	Sgt. Pepper's Lonely Hearts Club Band	1967	lucyintheskywithdiamonds.txt
+101	Getting Better	Sgt. Pepper's Lonely Hearts Club Band	1967	gettingbetter.txt
+102	Fixing A Hole	Sgt. Pepper's Lonely Hearts Club Band	1967	fixingahole.txt
+103	She's Leaving Home	Sgt. Pepper's Lonely Hearts Club Band	1967	shesleavinghome.txt
+104	Being For The Benefit Of Mr. Kite!	Sgt. Pepper's Lonely Hearts Club Band	1967	beingforthebenefitofmrkite.txt
+105	Within You Without You	Sgt. Pepper's Lonely Hearts Club Band	1967	withinyouwithoutyou.txt
+106	When I'm Sixty Four	Sgt. Pepper's Lonely Hearts Club Band	1967	whenimsixtyfour.txt
+107	Lovely Rita	Sgt. Pepper's Lonely Hearts Club Band	1967	lovelyrita.txt
+108	Good Morning, Good Morning	Sgt. Pepper's Lonely Hearts Club Band	1967	goodmorninggoodmorning.txt
+109	Sgt. Pepper's Lonely Hearts Club Band (Reprise)	Sgt. Pepper's Lonely Hearts Club Band	1967	sgtpepperslonelyheartsclubbandreprise.txt
+110	A Day In The Life	Sgt. Pepper's Lonely Hearts Club Band	1967	adayinthelife.txt
+111	Magical Mystery Tour	Magical Mystery Tour	1967	magicalmysterytour.txt
+112	The Fool On The Hill	Magical Mystery Tour	1967	thefoolonthehill.txt
+113	Flying	Magical Mystery Tour	1967	flying.txt
+114	Blue Jay Way	Magical Mystery Tour	1967	bluejayway.txt
+115	Your Mother Should Know	Magical Mystery Tour	1967	yourmothershouldknow.txt
+116	I Am The Walrus	Magical Mystery Tour	1967	iamthewalrus.txt
+117	Hello, Goodbye	Magical Mystery Tour	1967	hellogoodbye.txt
+118	Strawberry Fields Forever	Magical Mystery Tour	1967	strawberryfieldsforever.txt
+119	Penny Lane	Magical Mystery Tour	1967	pennylane.txt
+120	Baby, You're A Rich Man	Magical Mystery Tour	1967	babyyourearichman.txt
+121	All You Need Is Love	Magical Mystery Tour	1967	allyouneedislove.txt
+122	Back In The U.S.S.R.	The Beatles (The White Album)	1968	backintheussr.txt
+123	Dear Prudence	The Beatles (The White Album)	1968	dearprudence.txt
+124	Glass Onion	The Beatles (The White Album)	1968	glassonion.txt
+125	Ob-La-Di, Ob-La-Da	The Beatles (The White Album)	1968	obladioblada.txt
+126	Wild Honey Pie	The Beatles (The White Album)	1968	wildhoneypie.txt
+127	The Continuing Story Of Bungalow Bill	The Beatles (The White Album)	1968	thecontinuingstoryofbungalowbill.txt
+128	While My Guitar Gently Weeps	The Beatles (The White Album)	1968	whilemyguitargentlyweeps.txt
+129	Happiness Is A Warm Gun	The Beatles (The White Album)	1968	happinessisawarmgun.txt
+130	Martha My Dear	The Beatles (The White Album)	1968	marthamydear.txt
+131	I'm So Tired	The Beatles (The White Album)	1968	imsotired.txt
+132	Blackbird	The Beatles (The White Album)	1968	blackbird.txt
+133	Piggies	The Beatles (The White Album)	1968	piggies.txt
+134	Rocky Raccoon	The Beatles (The White Album)	1968	rockyraccoon.txt
+135	Don't Pass Me By	The Beatles (The White Album)	1968	dontpassmeby.txt
+136	Why Don't We Do It In The Road?	The Beatles (The White Album)	1968	whydontwedoitintheroad.txt
+137	I Will	The Beatles (The White Album)	1968	iwill.txt
+138	Julia	The Beatles (The White Album)	1968	julia.txt
+139	Birthday	The Beatles (The White Album)	1968	birthday.txt
+140	Yer Blues	The Beatles (The White Album)	1968	yerblues.txt
+141	Mother Nature's Son	The Beatles (The White Album)	1968	mothernaturesson.txt
+142	Everybody's Got Something To Hide Except Me And My Monkey	The Beatles (The White Album)	1968	everybodysgotsomethingtohideexceptmeandmymonkey.txt
+143	Sexy Sadie	The Beatles (The White Album)	1968	sexysadie.txt
+144	Helter Skelter	The Beatles (The White Album)	1968	helterskelter.txt
+145	Long, Long, Long	The Beatles (The White Album)	1968	longlonglong.txt
+146	Revolution 1	The Beatles (The White Album)	1968	revolution1.txt
+147	Honey Pie	The Beatles (The White Album)	1968	honeypie.txt
+148	Savoy Truffle	The Beatles (The White Album)	1968	savoytruffle.txt
+149	Cry Baby Cry	The Beatles (The White Album)	1968	crybabycry.txt
+150	Revolution 9	The Beatles (The White Album)	1968	revolution9.txt
+151	Good Night	The Beatles (The White Album)	1968	goodnight.txt
+152	Yellow Submarine	Yellow Submarine	1969	yellowsubmarine.txt
+153	Only A Northern Song	Yellow Submarine	1969	onlyanorthernsong.txt
+154	All Together Now	Yellow Submarine	1969	alltogethernow.txt
+155	Hey Bulldog	Yellow Submarine	1969	heybulldog.txt
+156	It's All Too Much	Yellow Submarine	1969	itsalltoomuch.txt
+157	All You Need Is Love	Yellow Submarine	1969	allyouneedislove.txt
+158	Pepperland	Yellow Submarine	1969	pepperland.txt
+159	Medley: Sea Of Time & Sea Of Holes	Yellow Submarine	1969	medleyseaoftimeseaofholes.txt
+160	Sea Of Monsters	Yellow Submarine	1969	seaofmonsters.txt
+161	March Of The Meanies	Yellow Submarine	1969	marchofthemeanies.txt
+162	Pepperland Laid Waste	Yellow Submarine	1969	pepperlandlaidwaste.txt
+163	Yellow Submarine In Pepperland	Yellow Submarine	1969	yellowsubmarineinpepperland.txt
+164	Come Together	Abbey Road	1969	cometogether.txt
+165	Something	Abbey Road	1969	something.txt
+166	Maxwell's Silver Hammer	Abbey Road	1969	maxwellssilverhammer.txt
+167	Oh! Darling	Abbey Road	1969	ohdarling.txt
+168	Octopus's Garden	Abbey Road	1969	octopussgarden.txt
+169	I Want You (She's So Heavy)	Abbey Road	1969	iwantyoushessoheavy.txt
+170	Here Comes The Sun	Abbey Road	1969	herecomesthesun.txt
+171	Because	Abbey Road	1969	because.txt
+172	You Never Give Me Your Money	Abbey Road	1969	younevergivemeyourmoney.txt
+173	Sun King	Abbey Road	1969	sunking.txt
+174	Mean Mr. Mustard	Abbey Road	1969	meanmrmustard.txt
+175	Polythene Pam	Abbey Road	1969	polythenepam.txt
+176	She Came In Through The Bathroom Window	Abbey Road	1969	shecameinthroughthebathroomwindow.txt
+177	Golden Slumbers	Abbey Road	1969	goldenslumbers.txt
+178	Carry That Weight	Abbey Road	1969	carrythatweight.txt
+179	The End	Abbey Road	1969	theend.txt
+180	Her Majesty	Abbey Road	1969	hermajesty.txt
+181	Two Of Us	Let It Be	1970	twoofus.txt
+182	Dig A Pony	Let It Be	1970	digapony.txt
+183	Across The Universe	Let It Be	1970	acrosstheuniverse.txt
+184	I Me Mine	Let It Be	1970	imemine.txt
+185	Dig It	Let It Be	1970	digit.txt
+186	Let It Be	Let It Be	1970	letitbe.txt
+187	Maggie Mae	Let It Be	1970	maggiemae.txt
+188	I've Got A Feeling	Let It Be	1970	ivegotafeeling.txt
+189	One After 909	Let It Be	1970	oneafter909.txt
+190	The Long And Winding Road	Let It Be	1970	thelongandwindingroad.txt
+191	For You Blue	Let It Be	1970	foryoublue.txt
+192	Get Back	Let It Be	1970	getback.txt
+193	Love Me Do	Past Masters. Volume One	1988	lovemedo.txt
+194	From Me To You	Past Masters. Volume One	1988	frommetoyou.txt
+195	Thank You Girl	Past Masters. Volume One	1988	thankyougirl.txt
+196	She Loves You	Past Masters. Volume One	1988	shelovesyou.txt
+197	I'll Get You	Past Masters. Volume One	1988	illgetyou.txt
+198	I Want To Hold Your Hand	Past Masters. Volume One	1988	iwanttoholdyourhand.txt
+199	This Boy	Past Masters. Volume One	1988	thisboy.txt
+200	Komm, Gib Mir Deine Hand	Past Masters. Volume One	1988	kommgibmirdeinehand.txt
+201	Sie Liebt Dich	Past Masters. Volume One	1988	sieliebtdich.txt
+202	Long Tall Sally	Past Masters. Volume One	1988	longtallsally.txt
+203	I Call Your Name	Past Masters. Volume One	1988	icallyourname.txt
+204	Slow Down	Past Masters. Volume One	1988	slowdown.txt
+205	Matchbox	Past Masters. Volume One	1988	matchbox.txt
+206	I Feel Fine	Past Masters. Volume One	1988	ifeelfine.txt
+207	She's A Woman	Past Masters. Volume One	1988	shesawoman.txt
+208	Bad Boy	Past Masters. Volume One	1988	badboy.txt
+209	Yes It Is	Past Masters. Volume One	1988	yesitis.txt
+210	I'm Down	Past Masters. Volume One	1988	imdown.txt
+211	Day Tripper	Past Masters. Volume One	1988	daytripper.txt
+212	We Can Work It Out	Past Masters. Volume One	1988	wecanworkitout.txt
+213	Paperback Writer	Past Masters. Volume One	1988	paperbackwriter.txt
+214	Rain	Past Masters. Volume One	1988	rain.txt
+215	Lady Madonna	Past Masters. Volume One	1988	ladymadonna.txt
+216	The Inner Light	Past Masters. Volume One	1988	theinnerlight.txt
+217	Hey Jude	Past Masters. Volume One	1988	heyjude.txt
+218	Revolution	Past Masters. Volume One	1988	revolution.txt
+219	Get Back	Past Masters. Volume One	1988	get-back-past-masters-2.txt
+220	Don't Let Me Down	Past Masters. Volume One	1988	dontletmedown.txt
+221	The Ballad Of John And Yoko	Past Masters. Volume One	1988	theballadofjohnandyoko.txt
+222	Old Brown Shoe	Past Masters. Volume One	1988	oldbrownshoe.txt
+223	Across The Universe	Past Masters. Volume One	1988	across-the-universe.txt
+224	Let It Be	Past Masters. Volume One	1988	let-it-be.txt
+225	You Know My Name (Look Up The Number)	Past Masters. Volume One	1988	youknowmynamelookupthenumber.txt
+226	Beatle Greetings	Past Masters. Volume One	1988	beatlegreetings.txt
+227	From Us To You	Past Masters. Volume One	1988	fromustoyou.txt
+228	Riding On A Bus	Past Masters. Volume One	1988	ridingonabus.txt
+229	I Got A Woman	Past Masters. Volume One	1988	igotawoman.txt
+230	Too Much Monkey Business	Past Masters. Volume One	1988	toomuchmonkeybusiness.txt
+231	Keep Your Hands Off My Baby	Past Masters. Volume One	1988	keepyourhandsoffmybaby.txt
+232	I'll Be On My Way	Past Masters. Volume One	1988	illbeonmyway.txt
+233	Young Blood	Past Masters. Volume One	1988	youngblood.txt
+234	A Shot Of Rhythm And Blues	Past Masters. Volume One	1988	ashotofrhythmandblues.txt
+235	Sure To Fall (In Love With You)	Past Masters. Volume One	1988	suretofallinlovewithyou.txt
+236	Some Other Guy	Past Masters. Volume One	1988	someotherguy.txt
+237	Thank You Girl	Past Masters. Volume One	1988	thankyougirl.txt
+238	Sha La La La La!	Past Masters. Volume One	1988	shalalalala.txt
+239	Baby It's You	Past Masters. Volume One	1988	babyitsyou.txt
+240	That's Alright (Mama)	Past Masters. Volume One	1988	thatsalrightmama.txt
+241	Carol	Past Masters. Volume One	1988	carol.txt
+242	Soldier Of Love	Past Masters. Volume One	1988	soldieroflove.txt
+243	A Little Rhyme	Past Masters. Volume One	1988	alittlerhyme.txt
+244	Clarabella	Past Masters. Volume One	1988	clarabella.txt
+245	I'm Gonna Sit Right Down And Cry (Over You)	Past Masters. Volume One	1988	imgonnasitrightdownandcryoveryou.txt
+246	Crying, Waiting, Hoping	Past Masters. Volume One	1988	cryingwaitinghoping.txt
+247	Dear Wack!	Past Masters. Volume One	1988	dearwack.txt
+248	You Really Got A Hold On Me	Past Masters. Volume One	1988	youreallygotaholdonme.txt
+249	To Know Her Is To Love Her	Past Masters. Volume One	1988	toknowheristoloveher.txt
+250	A Taste Of Honey	Past Masters. Volume One	1988	atasteofhoney.txt
+251	Long Tall Sally	Past Masters. Volume One	1988	longtallsally.txt
+252	I Saw Her Standing There	Past Masters. Volume One	1988	isawherstandingthere.txt
+253	The Honeymoon Song	Past Masters. Volume One	1988	thehoneymoonsong.txt
+254	Johnny B. Goode	Past Masters. Volume One	1988	johnnybgoode.txt
+255	Memphis, Tennessee	Past Masters. Volume One	1988	memphistennessee.txt
+256	Lucille	Past Masters. Volume One	1988	lucille.txt
+257	Can't Buy Me Love	Past Masters. Volume One	1988	cantbuymelove.txt
+258	From Fluff To You	Past Masters. Volume One	1988	fromflufftoyou.txt
+259	Till There Was You	Past Masters. Volume One	1988	tilltherewasyou.txt
+260	Crinsk Dee Night	Past Masters. Volume One	1988	crinskdeenight.txt
+261	A Hard Day's Night	Past Masters. Volume One	1988	aharddaysnight.txt
+262	Have A Banana!	Past Masters. Volume One	1988	haveabanana.txt
+263	I Wanna Be Your Man	Past Masters. Volume One	1988	iwannabeyourman.txt
+264	Just A Rumour	Past Masters. Volume One	1988	justarumour.txt
+265	Roll Over Beethoven	Past Masters. Volume One	1988	rolloverbeethoven.txt
+266	All My Loving	Past Masters. Volume One	1988	allmyloving.txt
+267	Things We Said Today	Past Masters. Volume One	1988	thingswesaidtoday.txt
+268	She's A Woman	Past Masters. Volume One	1988	shesawoman.txt
+269	Sweet Little Sixteen	Past Masters. Volume One	1988	sweetlittlesixteen.txt
+270	1822!	Past Masters. Volume One	1988	1822.txt
+271	Lonesome Tears In My Eyes	Past Masters. Volume One	1988	lonesometearsinmyeyes.txt
+272	Nothin' Shakin'	Past Masters. Volume One	1988	nothinshakin.txt
+273	The Hippy Hippy Shake	Past Masters. Volume One	1988	thehippyhippyshake.txt
+274	Glad All Over	Past Masters. Volume One	1988	gladallover.txt
+275	I Just Don't Understand	Past Masters. Volume One	1988	ijustdontunderstand.txt
+276	So How Come (No One Loves Me)	Past Masters. Volume One	1988	sohowcomenoonelovesme.txt
+277	I Feel Fine	Past Masters. Volume One	1988	ifeelfine.txt
+278	I'm A Loser	Past Masters. Volume One	1988	imaloser.txt
+279	Everybody's Trying To Be My Baby	Past Masters. Volume One	1988	everybodystryingtobemybaby.txt
+280	Rock And Roll Music	Past Masters. Volume One	1988	rockandrollmusic.txt
+281	Ticket To Ride	Past Masters. Volume One	1988	tickettoride.txt
+282	Dizzy Miss Lizzy	Past Masters. Volume One	1988	dizzymisslizzy.txt
+283	Medley: Kansas City / Hey, Hey, Hey, Hey	Past Masters. Volume One	1988	medleykansascityheyheyheyhey.txt
+284	Set Fire To That Lot!	Past Masters. Volume One	1988	setfiretothatlot.txt
+285	Matchbox	Past Masters. Volume One	1988	matchbox.txt
+286	I Forgot To Remember To Forget	Past Masters. Volume One	1988	iforgottoremembertoforget.txt
+287	Love These Goon Shows!	Past Masters. Volume One	1988	lovethesegoonshows.txt
+288	I Got To Find My Baby	Past Masters. Volume One	1988	igottofindmybaby.txt
+289	Ooh! My Soul	Past Masters. Volume One	1988	oohmysoul.txt
+290	Ooh! My Arms	Past Masters. Volume One	1988	oohmyarms.txt
+291	Don't Ever Change	Past Masters. Volume One	1988	donteverchange.txt
+292	Slow Down	Past Masters. Volume One	1988	slowdown.txt
+293	Honey Don't	Past Masters. Volume One	1988	honeydont.txt
+294	Love Me Do	Past Masters. Volume One	1988	lovemedo.txt
+295	Free As A Bird	Past Masters. Volume One	1988	freeasabird.txt
+296	That'll Be The Day	Past Masters. Volume One	1988	thatllbetheday.txt
+297	In Spite Of All The Danger	Past Masters. Volume One	1988	inspiteofallthedanger.txt
+298	Hallelujah, I Love Her So	Past Masters. Volume One	1988	hallelujahiloveherso.txt
+299	You'll Be Mine	Past Masters. Volume One	1988	youllbemine.txt
+300	My Bonnie	Past Masters. Volume One	1988	mybonnie.txt
+301	Ain't She Sweet	Past Masters. Volume One	1988	aintshesweet.txt
+302	Searchin'	Past Masters. Volume One	1988	searchin.txt
+303	Three Cool Cats	Past Masters. Volume One	1988	threecoolcats.txt
+304	The Sheik Of Araby	Past Masters. Volume One	1988	thesheikofaraby.txt
+305	Like Dreamers Do	Past Masters. Volume One	1988	likedreamersdo.txt
+306	Hello Little Girl	Past Masters. Volume One	1988	hellolittlegirl.txt
+307	Besame Mucho	Past Masters. Volume One	1988	besamemucho.txt
+308	Love Me Do	Past Masters. Volume One	1988	lovemedo.txt
+309	How Do You Do It	Past Masters. Volume One	1988	howdoyoudoit.txt
+310	Please Please Me	Past Masters. Volume One	1988	pleasepleaseme.txt
+311	One After 909	Past Masters. Volume One	1988	oneafter909.txt
+312	Lend Me Your Comb	Past Masters. Volume One	1988	lendmeyourcomb.txt
+313	I'll Get You	Past Masters. Volume One	1988	illgetyou.txt
+314	I Saw Her Standing There	Past Masters. Volume One	1988	isawherstandingthere.txt
+315	From Me To You	Past Masters. Volume One	1988	frommetoyou.txt
+316	Money (That's What I Want)	Past Masters. Volume One	1988	moneythatswhatiwant.txt
+317	You Really Got A Hold On Me	Past Masters. Volume One	1988	youreallygotaholdonme.txt
+318	Roll Over Beethoven	Past Masters. Volume One	1988	rolloverbeethoven.txt
+319	She Loves You	Past Masters. Volume One	1988	shelovesyou.txt
+320	Till There Was You	Past Masters. Volume One	1988	tilltherewasyou.txt
+321	Twist And Shout	Past Masters. Volume One	1988	twistandshout.txt
+322	This Boy	Past Masters. Volume One	1988	thisboy.txt
+323	I Want To Hold Your Hand	Past Masters. Volume One	1988	iwanttoholdyourhand.txt
+324	Moonlight Bay	Past Masters. Volume One	1988	moonlightbay.txt
+325	Can't Buy Me Love	Past Masters. Volume One	1988	cantbuymelove.txt
+326	All My Loving	Past Masters. Volume One	1988	allmyloving.txt
+327	You Can't Do That	Past Masters. Volume One	1988	youcantdothat.txt
+328	And I Love Her	Past Masters. Volume One	1988	andiloveher.txt
+329	A Hard Day's Night	Past Masters. Volume One	1988	aharddaysnight.txt
+330	I Wanna Be Your Man	Past Masters. Volume One	1988	iwannabeyourman.txt
+331	Long Tall Sally	Past Masters. Volume One	1988	longtallsally.txt
+332	Boys	Past Masters. Volume One	1988	boys.txt
+333	Shout	Past Masters. Volume One	1988	shout.txt
+334	I'll Be Back	Past Masters. Volume One	1988	illbeback.txt
+335	You Know What To Do	Past Masters. Volume One	1988	youknowwhattodo.txt
+336	No Reply	Past Masters. Volume One	1988	noreply.txt
+337	Mr. Moonlight	Past Masters. Volume One	1988	mrmoonlight.txt
+338	Leave My Kitten Alone	Past Masters. Volume One	1988	leavemykittenalone.txt
+339	Eight Days A Week	Past Masters. Volume One	1988	eightdaysaweek.txt
+340	Medley: Kansas City / Hey, Hey, Hey, Hey	Past Masters. Volume One	1988	medleykansascityheyheyheyhey.txt
+341	Real Love	Past Masters. Volume One	1988	reallove.txt
+342	Yes It Is	Past Masters. Volume One	1988	yesitis.txt
+343	I'm Down	Past Masters. Volume One	1988	imdown.txt
+344	You've Got To Hide Your Love Away	Past Masters. Volume One	1988	youvegottohideyourloveaway.txt
+345	If You've Got Trouble	Past Masters. Volume One	1988	ifyouvegottrouble.txt
+346	That Means A Lot	Past Masters. Volume One	1988	thatmeansalot.txt
+347	Yesterday	Past Masters. Volume One	1988	yesterday.txt
+348	It's Only Love	Past Masters. Volume One	1988	itsonlylove.txt
+349	I Feel Fine	Past Masters. Volume One	1988	ifeelfine.txt
+350	Ticket To Ride	Past Masters. Volume One	1988	tickettoride.txt
+351	Yesterday	Past Masters. Volume One	1988	yesterday.txt
+352	Help!	Past Masters. Volume One	1988	help-anthology.txt
+353	Everybody's Trying To Be My Baby	Past Masters. Volume One	1988	everybodystryingtobemybaby.txt
+354	Norwegian Wood (This Bird Has Flown)	Past Masters. Volume One	1988	norwegianwoodthisbirdhasflown.txt
+355	I'm Looking Through You	Past Masters. Volume One	1988	imlookingthroughyou.txt
+356	Tomorrow Never Knows	Past Masters. Volume One	1988	tomorrowneverknows.txt
+357	Got To Get You Into My Life	Past Masters. Volume One	1988	gottogetyouintomylife.txt
+358	And Your Bird Can Sing	Past Masters. Volume One	1988	andyourbirdcansing.txt
+359	Taxman	Past Masters. Volume One	1988	taxman.txt
+360	Eleanor Rigby	Past Masters. Volume One	1988	eleanorrigby.txt
+361	I'm Only Sleeping	Past Masters. Volume One	1988	imonlysleeping.txt
+362	Rock And Roll Music	Past Masters. Volume One	1988	rockandrollmusic.txt
+363	She's A Woman	Past Masters. Volume One	1988	shesawoman.txt
+364	Strawberry Fields Forever	Past Masters. Volume One	1988	strawberryfieldsforever.txt
+365	Penny Lane	Past Masters. Volume One	1988	pennylane.txt
+366	A Day In The Life	Past Masters. Volume One	1988	adayinthelife.txt
+367	Good Morning, Good Morning	Past Masters. Volume One	1988	goodmorninggoodmorning.txt
+368	Only A Northern Song	Past Masters. Volume One	1988	onlyanorthernsong.txt
+369	Being For The Benefit Of Mr. Kite!	Past Masters. Volume One	1988	beingforthebenefitofmrkite.txt
+370	Lucy In The Sky With Diamonds	Past Masters. Volume One	1988	lucyintheskywithdiamonds.txt
+371	Within You Without You	Past Masters. Volume One	1988	withinyouwithoutyou.txt
+372	Sgt. Pepper's Lonely Hearts Club Band (Reprise)	Past Masters. Volume One	1988	sgtpepperslonelyheartsclubbandreprise.txt
+373	You Know My Name (Look Up The Number)	Past Masters. Volume One	1988	youknowmynamelookupthenumber.txt
+374	I Am The Walrus	Past Masters. Volume One	1988	i-am-the-walrus.txt
+375	The Fool On The Hill	Past Masters. Volume One	1988	thefoolonthehill.txt
+376	Your Mother Should Know	Past Masters. Volume One	1988	yourmothershouldknow.txt
+377	Hello, Goodbye	Past Masters. Volume One	1988	hellogoodbye.txt
+378	Lady Madonna	Past Masters. Volume One	1988	ladymadonna.txt
+379	Across The Universe	Past Masters. Volume One	1988	across-the-universe-anthology-2.txt
+380	Happiness Is A Warm Gun	Past Masters. Volume One	1988	happinessisawarmgun.txt
+381	Helter Skelter	Past Masters. Volume One	1988	helterskelter.txt
+382	Mean Mr. Mustard	Past Masters. Volume One	1988	meanmrmustard.txt
+383	Polythene Pam	Past Masters. Volume One	1988	polythenepam.txt
+384	Glass Onion	Past Masters. Volume One	1988	glassonion.txt
+385	Junk	Past Masters. Volume One	1988	junk.txt
+386	Piggies	Past Masters. Volume One	1988	piggies.txt
+387	Honey Pie	Past Masters. Volume One	1988	honeypie.txt
+388	Don't Pass Me By	Past Masters. Volume One	1988	dontpassmeby.txt
+389	Ob-La-Di, Ob-La-Da	Past Masters. Volume One	1988	obladioblada.txt
+390	Good Night	Past Masters. Volume One	1988	goodnight.txt
+391	Cry Baby Cry	Past Masters. Volume One	1988	crybabycry.txt
+392	Blackbird	Past Masters. Volume One	1988	blackbird.txt
+393	Sexy Sadie	Past Masters. Volume One	1988	sexysadie.txt
+394	While My Guitar Gently Weeps	Past Masters. Volume One	1988	whilemyguitargentlyweeps.txt
+395	Hey Jude	Past Masters. Volume One	1988	heyjude.txt
+396	Not Guilty	Past Masters. Volume One	1988	notguilty.txt
+397	Mother Nature's Son	Past Masters. Volume One	1988	mothernaturesson.txt
+398	Rocky Raccoon	Past Masters. Volume One	1988	rockyraccoon.txt
+399	What's The New Mary Jane	Past Masters. Volume One	1988	whatsthenewmaryjane.txt
+400	Step Inside Love / Los Paranoias	Past Masters. Volume One	1988	stepinsidelovelosparanoias.txt
+401	I'm So Tired	Past Masters. Volume One	1988	imsotired.txt
+402	I Will	Past Masters. Volume One	1988	iwill.txt
+403	Why Don't We Do It In The Road?	Past Masters. Volume One	1988	whydontwedoitintheroad.txt
+404	Julia	Past Masters. Volume One	1988	julia.txt
+405	I've Got A Feeling	Past Masters. Volume One	1988	ivegotafeeling.txt
+406	She Came In Through The Bathroom Window	Past Masters. Volume One	1988	shecameinthroughthebathroomwindow.txt
+407	Dig A Pony	Past Masters. Volume One	1988	digapony.txt
+408	Two Of Us	Past Masters. Volume One	1988	twoofus.txt
+409	For You Blue	Past Masters. Volume One	1988	foryoublue.txt
+410	Teddy Boy	Past Masters. Volume One	1988	teddyboy.txt
+411	Medley: Rip It Up / Shake, Rattle And Roll / Blue Suede Shoes	Past Masters. Volume One	1988	medleyripitupshakerattleandrollbluesuedeshoes.txt
+412	The Long And Winding Road	Past Masters. Volume One	1988	thelongandwindingroad.txt
+413	Oh! Darling	Past Masters. Volume One	1988	ohdarling.txt
+414	All Things Must Pass	Past Masters. Volume One	1988	allthingsmustpass.txt
+415	Mailman, Bring Me No More Blues	Past Masters. Volume One	1988	mailmanbringmenomoreblues.txt
+416	Get Back	Past Masters. Volume One	1988	get-back-anthology-3.txt
+417	Old Brown Shoe	Past Masters. Volume One	1988	oldbrownshoe.txt
+418	Octopus's Garden	Past Masters. Volume One	1988	octopussgarden.txt
+419	Maxwell's Silver Hammer	Past Masters. Volume One	1988	maxwellssilverhammer.txt
+420	Something	Past Masters. Volume One	1988	something.txt
+421	Come Together	Past Masters. Volume One	1988	come-together.txt
+422	Come And Get It	Past Masters. Volume One	1988	comeandgetit.txt
+423	Ain't She Sweet	Past Masters. Volume One	1988	aintshesweet.txt
+424	Because	Past Masters. Volume One	1988	because.txt
+425	Let It Be	Past Masters. Volume One	1988	let-it-be-anthology.txt
+426	I Me Mine	Past Masters. Volume One	1988	imemine.txt
+427	The End	Past Masters. Volume One	1988	theend.txt

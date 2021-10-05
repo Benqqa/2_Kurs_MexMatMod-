@@ -1,0 +1,7 @@
+while (a+b)/2 !=float(0):
+    if fun(a)*fun(b)<0:
+        c=(a+b)/2
+        if fun(a)*fun(c)<0:
+            b=c
+        else:
+            a=c
